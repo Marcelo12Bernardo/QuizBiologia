@@ -10,7 +10,9 @@ public class Menu extends javax.swing.JFrame {
         btnJoga.setFocusPainted(false);
         btnSair.setFocusPainted(false);
         btnCreditos.setFocusPainted(false);
+        
         this.setLocationRelativeTo(null);
+        this.setSize(500,300);
         
         
     }
@@ -72,7 +74,7 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfaces/funfdoBranco.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 480, 200);
+        jLabel1.setBounds(0, 0, 370, 300);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
