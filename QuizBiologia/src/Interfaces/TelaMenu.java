@@ -4,8 +4,8 @@ package Interfaces;
 import javax.swing.JOptionPane;
 
 
-public class Menu extends javax.swing.JFrame {
-    public Menu() {
+public class TelaMenu extends javax.swing.JFrame {
+    public TelaMenu() {
         initComponents();
         btnJoga.setFocusPainted(false);
         btnSair.setFocusPainted(false);
@@ -20,24 +20,24 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
+        lblIconeGame = new javax.swing.JLabel();
         btnJoga = new javax.swing.JButton();
         btnCreditos = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        lblFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Quiz");
         setBackground(new java.awt.Color(0, 0, 0));
-        setMaximumSize(new java.awt.Dimension(475, 200));
-        setMinimumSize(new java.awt.Dimension(475, 200));
-        setPreferredSize(new java.awt.Dimension(475, 200));
+        setMaximumSize(new java.awt.Dimension(530, 350));
+        setMinimumSize(new java.awt.Dimension(530, 350));
+        setPreferredSize(new java.awt.Dimension(530, 350));
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfaces/fundoq.png"))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(79, 11, 206, 86);
+        lblIconeGame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/iconeQuiz.png"))); // NOI18N
+        getContentPane().add(lblIconeGame);
+        lblIconeGame.setBounds(79, 11, 206, 86);
 
         btnJoga.setBackground(new java.awt.Color(153, 255, 255));
         btnJoga.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
@@ -48,7 +48,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnJoga);
-        btnJoga.setBounds(40, 140, 80, 23);
+        btnJoga.setBounds(40, 220, 80, 23);
 
         btnCreditos.setBackground(new java.awt.Color(153, 255, 255));
         btnCreditos.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
@@ -59,7 +59,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnCreditos);
-        btnCreditos.setBounds(150, 140, 90, 23);
+        btnCreditos.setBounds(150, 220, 90, 23);
 
         btnSair.setBackground(new java.awt.Color(153, 255, 255));
         btnSair.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
@@ -70,33 +70,33 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnSair);
-        btnSair.setBounds(270, 140, 70, 23);
+        btnSair.setBounds(270, 220, 70, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfaces/funfdoBranco.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 370, 300);
+        lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/fundoBranco.png"))); // NOI18N
+        getContentPane().add(lblFundo);
+        lblFundo.setBounds(0, 0, 530, 350);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnJogaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJogaActionPerformed
      //Cria a janela game.
-      Jogo game2 = new Jogo();
+      TelaJogo game2 = new TelaJogo();
       game2.setVisible(true);   
-      Menu.this.dispose(); 
+      TelaMenu.this.dispose(); 
     }//GEN-LAST:event_btnJogaActionPerformed
 
     private void btnCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreditosActionPerformed
-       Menu.this.setVisible(false);
+       TelaMenu.this.setVisible(false);
         JOptionPane.showMessageDialog(null,"*Programador:\nMarcelo Bernardo Prudencio\n"
                + "\n*Colaboradores:\nMarcus Vinicios Dias\n"
                + "Ivanilso da Silva Conceiçao Filho\n"
                + "\n*Designer grafico:\nMarcelo Bernardo Prudencio");
-         Menu.this.setVisible(true);
+         TelaMenu.this.setVisible(true);
     }//GEN-LAST:event_btnCreditosActionPerformed
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
-       Menu.this.dispose();
+       TelaMenu.this.dispose();
     }//GEN-LAST:event_btnSairActionPerformed
 
     
@@ -104,7 +104,7 @@ public class Menu extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 
-                new Menu().setVisible(true);
+                new TelaMenu().setVisible(true);
             }
         });
     }
@@ -113,7 +113,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton btnCreditos;
     private javax.swing.JButton btnJoga;
     private javax.swing.JButton btnSair;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lblFundo;
+    private javax.swing.JLabel lblIconeGame;
     // End of variables declaration//GEN-END:variables
 }

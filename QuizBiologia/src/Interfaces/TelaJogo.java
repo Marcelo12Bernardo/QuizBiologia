@@ -1,10 +1,10 @@
 package Interfaces;
 import javax.swing.JOptionPane;
-public class Jogo extends javax.swing.JFrame {
+public class TelaJogo extends javax.swing.JFrame {
      
 int cont=1;
 int pontos=0; 
-    public Jogo() {
+    public TelaJogo() {
         initComponents();
         jButton1.setFocusPainted(false);
         jButton2.setFocusPainted(false);
@@ -26,7 +26,6 @@ int pontos=0;
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(380, 250));
         setResizable(false);
 
         jTextArea1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
@@ -125,25 +124,25 @@ int pontos=0;
      //Certa ou errada.
      switch(cont){
         case 3:
-        Jogo.this.jTextArea1.setText("4");
-        Jogo.this.jButton1.setText("4");
-        Jogo.this.jButton2.setText("sl2");
-        Jogo.this.jButton3.setText("sl3");
-        Jogo.this.jButton4.setText("sl4");
+        TelaJogo.this.jTextArea1.setText("4");
+        TelaJogo.this.jButton1.setText("4");
+        TelaJogo.this.jButton2.setText("sl2");
+        TelaJogo.this.jButton3.setText("sl3");
+        TelaJogo.this.jButton4.setText("sl4");
         cont=(cont+1);
         pontos=(pontos+5);
-        Jogo.this.jLabel2.setText(""+pontos); 
+        TelaJogo.this.jLabel2.setText(""+pontos); 
             break; 
         case 7:
-        Jogo.this.jTextArea1.setText("8");
-        Jogo.this.jButton1.setText("8");
-        Jogo.this.jButton2.setText("sl2");
-        Jogo.this.jButton3.setText("sl3");
-        Jogo.this.jButton4.setText("sl4");
-        Jogo.this.setVisible(true);
+        TelaJogo.this.jTextArea1.setText("8");
+        TelaJogo.this.jButton1.setText("8");
+        TelaJogo.this.jButton2.setText("sl2");
+        TelaJogo.this.jButton3.setText("sl3");
+        TelaJogo.this.jButton4.setText("sl4");
+        TelaJogo.this.setVisible(true);
         cont=(cont+1);
         pontos=(pontos+5);
-        Jogo.this.jLabel2.setText(""+pontos); 
+        TelaJogo.this.jLabel2.setText(""+pontos); 
             break;
         default:
         RespostaErrada(); 
@@ -154,40 +153,40 @@ int pontos=0;
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        switch(cont){
         case 1:
-        Jogo.this.jTextArea1.setText("Um organismo unicelular, sem núcleo \n diferenciado,\ncausador de infecção em ratos, provavelmente será:");
-        Jogo.this.jButton1.setText("um fungo");
-        Jogo.this.jButton2.setText("um vírus.");
-        Jogo.this.jButton3.setText("uma alga");
-        Jogo.this.jButton4.setText("uma bactéria."); 
+        TelaJogo.this.jTextArea1.setText("Um organismo unicelular, sem núcleo \n diferenciado,\ncausador de infecção em ratos, provavelmente será:");
+        TelaJogo.this.jButton1.setText("um fungo");
+        TelaJogo.this.jButton2.setText("um vírus.");
+        TelaJogo.this.jButton3.setText("uma alga");
+        TelaJogo.this.jButton4.setText("uma bactéria."); 
         cont=(cont+1);
         pontos=(pontos+5);
-        Jogo.this.jLabel2.setText(""+pontos); 
+        TelaJogo.this.jLabel2.setText(""+pontos); 
             break;
         case 4:
-        Jogo.this.jTextArea1.setText("5");
-        Jogo.this.jButton1.setText("sl1");
-        Jogo.this.jButton2.setText("5");
-        Jogo.this.jButton3.setText("sl3");
-        Jogo.this.jButton4.setText("sl4");
-        Jogo.this.setVisible(true);
+        TelaJogo.this.jTextArea1.setText("5");
+        TelaJogo.this.jButton1.setText("sl1");
+        TelaJogo.this.jButton2.setText("5");
+        TelaJogo.this.jButton3.setText("sl3");
+        TelaJogo.this.jButton4.setText("sl4");
+        TelaJogo.this.setVisible(true);
          cont=(cont+1);
          pontos=(pontos+5);
-         Jogo.this.jLabel2.setText(""+pontos); 
+         TelaJogo.this.jLabel2.setText(""+pontos); 
             break;
         case 8:
-        Jogo.this.jTextArea1.setText("9");
-        Jogo.this.jButton1.setText("sl1");
-        Jogo.this.jButton2.setText("9");
-        Jogo.this.jButton3.setText("sl3");
-        Jogo.this.jButton4.setText("sl4");
-        Jogo.this.setVisible(true);
+        TelaJogo.this.jTextArea1.setText("9");
+        TelaJogo.this.jButton1.setText("sl1");
+        TelaJogo.this.jButton2.setText("9");
+        TelaJogo.this.jButton3.setText("sl3");
+        TelaJogo.this.jButton4.setText("sl4");
+        TelaJogo.this.setVisible(true);
         cont=(cont+1);
         pontos=(pontos+5);
-        Jogo.this.jLabel2.setText(""+pontos); 
+        TelaJogo.this.jLabel2.setText(""+pontos); 
             break;
         case 10:
-        Jogo.this.dispose();
-        Vitoria tela = new Vitoria();
+        TelaJogo.this.dispose();
+        TelaVitoria tela = new TelaVitoria();
         tela.setVisible(true);
             break;
         default:
@@ -199,36 +198,36 @@ int pontos=0;
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
        switch(cont){   
         case 2:    
-        Jogo.this.jTextArea1.setText("Podemos classificar as bactérias como");
-        Jogo.this.jButton1.setText("Eucariontes unicelulares.");
-        Jogo.this.jButton2.setText("eucariontes pluricelulares.");
-        Jogo.this.jButton3.setText("eucariontes coloniais.");
-        Jogo.this.jButton4.setText("procariontes unicelulares");    
+        TelaJogo.this.jTextArea1.setText("Podemos classificar as bactérias como");
+        TelaJogo.this.jButton1.setText("Eucariontes unicelulares.");
+        TelaJogo.this.jButton2.setText("eucariontes pluricelulares.");
+        TelaJogo.this.jButton3.setText("eucariontes coloniais.");
+        TelaJogo.this.jButton4.setText("procariontes unicelulares");    
          cont=(cont+1);
          pontos=(pontos+5);
-         Jogo.this.jLabel2.setText(""+pontos); 
+         TelaJogo.this.jLabel2.setText(""+pontos); 
             break;
         case 6:
-        Jogo.this.jTextArea1.setText("7");
-        Jogo.this.jButton1.setText("sl1");
-        Jogo.this.jButton2.setText("sl2");
-        Jogo.this.jButton3.setText("sl3");
-        Jogo.this.jButton4.setText("7");
-        Jogo.this.setVisible(true);
+        TelaJogo.this.jTextArea1.setText("7");
+        TelaJogo.this.jButton1.setText("sl1");
+        TelaJogo.this.jButton2.setText("sl2");
+        TelaJogo.this.jButton3.setText("sl3");
+        TelaJogo.this.jButton4.setText("7");
+        TelaJogo.this.setVisible(true);
        cont=(cont+1);
        pontos=(pontos+5);
-       Jogo.this.jLabel2.setText(""+pontos); 
+       TelaJogo.this.jLabel2.setText(""+pontos); 
             break;
         case 9:
-        Jogo.this.jTextArea1.setText("10");
-        Jogo.this.jButton1.setText("sl1");
-        Jogo.this.jButton2.setText("sl2");
-        Jogo.this.jButton3.setText("sl3");
-        Jogo.this.jButton4.setText("10");
-        Jogo.this.setVisible(true); 
+        TelaJogo.this.jTextArea1.setText("10");
+        TelaJogo.this.jButton1.setText("sl1");
+        TelaJogo.this.jButton2.setText("sl2");
+        TelaJogo.this.jButton3.setText("sl3");
+        TelaJogo.this.jButton4.setText("10");
+        TelaJogo.this.setVisible(true); 
          cont=(cont+1);
          pontos=(pontos+5);
-         Jogo.this.jLabel2.setText(""+pontos); 
+         TelaJogo.this.jLabel2.setText(""+pontos); 
             break;
         default:
          RespostaErrada();   
@@ -240,15 +239,15 @@ int pontos=0;
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
       switch(cont){
         case 5:
-         Jogo.this.jTextArea1.setText("6");
-            Jogo.this.jButton1.setText("sl1");
-            Jogo.this.jButton2.setText("sl2");
-            Jogo.this.jButton3.setText("6");
-            Jogo.this.jButton4.setText("sl4");
-            Jogo.this.setVisible(true);
+         TelaJogo.this.jTextArea1.setText("6");
+            TelaJogo.this.jButton1.setText("sl1");
+            TelaJogo.this.jButton2.setText("sl2");
+            TelaJogo.this.jButton3.setText("6");
+            TelaJogo.this.jButton4.setText("sl4");
+            TelaJogo.this.setVisible(true);
          cont=(cont+1);
          pontos=(pontos+5);
-         Jogo.this.jLabel2.setText(""+pontos); 
+         TelaJogo.this.jLabel2.setText(""+pontos); 
             break;
         default:
          RespostaErrada();
@@ -265,13 +264,13 @@ int pontos=0;
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Jogo().setVisible(true);
+                new TelaJogo().setVisible(true);
             }
         });
     }
     public void RespostaErrada(){
-     new Derrota().setVisible(true);
-    Jogo.this.dispose();
+     new TelaDerrota().setVisible(true);
+    TelaJogo.this.dispose();
     cont=1;
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables

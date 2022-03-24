@@ -1,11 +1,11 @@
 
 package Interfaces;
-public class Derrota extends javax.swing.JFrame {
+public class TelaDerrota extends javax.swing.JFrame {
 
     /**
      * Creates new form Derrota
      */
-    public Derrota() {
+    public TelaDerrota() {
         initComponents();
         jButton1.setFocusPainted(false);
         jButton2.setFocusPainted(false);
@@ -28,9 +28,7 @@ public class Derrota extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
         setForeground(new java.awt.Color(0, 0, 0));
-        setMaximumSize(new java.awt.Dimension(450, 450));
         setMinimumSize(new java.awt.Dimension(450, 450));
-        setPreferredSize(new java.awt.Dimension(450, 450));
         setResizable(false);
         setSize(new java.awt.Dimension(450, 450));
         getContentPane().setLayout(null);
@@ -57,7 +55,7 @@ public class Derrota extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(200, 380, 80, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfaces/FundoDerrota.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/FundoTelaDerrota.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 450, 450);
 
@@ -65,13 +63,13 @@ public class Derrota extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         new Menu().setVisible(true);
-         Derrota.this.dispose();
+         new TelaMenu().setVisible(true);
+         TelaDerrota.this.dispose();
          
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      Derrota.this.dispose();
+      TelaDerrota.this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -91,20 +89,21 @@ public class Derrota extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Derrota.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDerrota.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Derrota.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDerrota.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Derrota.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDerrota.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Derrota.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDerrota.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Derrota().setVisible(true);
+                new TelaDerrota().setVisible(true);
             }
         });
     }

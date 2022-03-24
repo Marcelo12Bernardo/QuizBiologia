@@ -1,7 +1,7 @@
 
 package Interfaces;
-public class Vitoria extends javax.swing.JFrame {
-    public Vitoria() {
+public class TelaVitoria extends javax.swing.JFrame {
+    public TelaVitoria() {
         initComponents();
         jButton1.setFocusPainted(false);
         jButton2.setFocusPainted(false);
@@ -19,7 +19,7 @@ public class Vitoria extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfaces/Vitoria.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/fundoTelaVitoria.png"))); // NOI18N
 
         jButton1.setText("Voltar ao menu");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -70,12 +70,12 @@ public class Vitoria extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new Menu().setVisible(true);
-         Vitoria.this.dispose();
+        new TelaMenu().setVisible(true);
+         TelaVitoria.this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Vitoria.this.dispose();
+        TelaVitoria.this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -95,20 +95,21 @@ public class Vitoria extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Vitoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaVitoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Vitoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaVitoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Vitoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaVitoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Vitoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaVitoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Vitoria().setVisible(true);
+                new TelaVitoria().setVisible(true);
             }
         });
     }
