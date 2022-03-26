@@ -24,6 +24,7 @@ public class TelaMenu extends javax.swing.JFrame {
         btnJoga = new javax.swing.JButton();
         btnCreditos = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
+        btnOpcoes = new javax.swing.JButton();
         lblFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -42,35 +43,58 @@ public class TelaMenu extends javax.swing.JFrame {
         btnJoga.setBackground(new java.awt.Color(153, 255, 255));
         btnJoga.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
         btnJoga.setText("Jogar");
+        btnJoga.setMaximumSize(new java.awt.Dimension(75, 25));
+        btnJoga.setMinimumSize(new java.awt.Dimension(75, 25));
+        btnJoga.setPreferredSize(new java.awt.Dimension(150, 35));
         btnJoga.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnJogaActionPerformed(evt);
             }
         });
         getContentPane().add(btnJoga);
-        btnJoga.setBounds(40, 220, 80, 23);
+        btnJoga.setBounds(140, 130, 150, 35);
 
         btnCreditos.setBackground(new java.awt.Color(153, 255, 255));
         btnCreditos.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
         btnCreditos.setText("Creditos");
+        btnCreditos.setMaximumSize(new java.awt.Dimension(75, 25));
+        btnCreditos.setMinimumSize(new java.awt.Dimension(75, 25));
+        btnCreditos.setPreferredSize(new java.awt.Dimension(150, 35));
         btnCreditos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreditosActionPerformed(evt);
             }
         });
         getContentPane().add(btnCreditos);
-        btnCreditos.setBounds(150, 220, 90, 23);
+        btnCreditos.setBounds(140, 210, 150, 35);
 
         btnSair.setBackground(new java.awt.Color(153, 255, 255));
         btnSair.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
         btnSair.setText("sair");
+        btnSair.setMaximumSize(new java.awt.Dimension(75, 25));
+        btnSair.setMinimumSize(new java.awt.Dimension(75, 25));
+        btnSair.setPreferredSize(new java.awt.Dimension(150, 35));
         btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSairActionPerformed(evt);
             }
         });
         getContentPane().add(btnSair);
-        btnSair.setBounds(270, 220, 70, 23);
+        btnSair.setBounds(140, 250, 150, 35);
+
+        btnOpcoes.setBackground(new java.awt.Color(153, 255, 255));
+        btnOpcoes.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        btnOpcoes.setText("Opções");
+        btnOpcoes.setMaximumSize(new java.awt.Dimension(75, 25));
+        btnOpcoes.setMinimumSize(new java.awt.Dimension(75, 25));
+        btnOpcoes.setPreferredSize(new java.awt.Dimension(150, 35));
+        btnOpcoes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOpcoesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnOpcoes);
+        btnOpcoes.setBounds(140, 170, 150, 35);
 
         lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/fundoBranco.png"))); // NOI18N
         getContentPane().add(lblFundo);
@@ -99,6 +123,10 @@ public class TelaMenu extends javax.swing.JFrame {
        TelaMenu.this.dispose();
     }//GEN-LAST:event_btnSairActionPerformed
 
+    private void btnOpcoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOpcoesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnOpcoesActionPerformed
+
     
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -112,6 +140,7 @@ public class TelaMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCreditos;
     private javax.swing.JButton btnJoga;
+    private javax.swing.JButton btnOpcoes;
     private javax.swing.JButton btnSair;
     private javax.swing.JLabel lblFundo;
     private javax.swing.JLabel lblIconeGame;

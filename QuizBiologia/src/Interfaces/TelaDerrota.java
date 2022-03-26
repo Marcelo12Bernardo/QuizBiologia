@@ -23,12 +23,13 @@ public class TelaDerrota extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        lblPlanoDeFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
         setForeground(new java.awt.Color(0, 0, 0));
-        setMinimumSize(new java.awt.Dimension(450, 450));
+        setMaximumSize(new java.awt.Dimension(530, 350));
+        setMinimumSize(new java.awt.Dimension(530, 350));
         setResizable(false);
         setSize(new java.awt.Dimension(450, 450));
         getContentPane().setLayout(null);
@@ -54,10 +55,8 @@ public class TelaDerrota extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2);
         jButton2.setBounds(200, 380, 80, 23);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/FundoTelaDerrota.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 450, 450);
+        getContentPane().add(lblPlanoDeFundo);
+        lblPlanoDeFundo.setBounds(0, 0, 0, 0);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -111,6 +110,6 @@ public class TelaDerrota extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblPlanoDeFundo;
     // End of variables declaration//GEN-END:variables
 }
