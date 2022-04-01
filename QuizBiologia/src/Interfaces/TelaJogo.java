@@ -1,29 +1,77 @@
 package Interfaces;
 import javax.swing.JOptionPane;
+
+
+
 public class TelaJogo extends javax.swing.JFrame {
+     public void setPerguntas(String pergunta,String a,String b,String c,String d){
+        TelaJogo.this.lblPergunta.setText(pergunta);
+        TelaJogo.this.btnLetraA.setText(a);
+        TelaJogo.this.btnLetraB.setText(b);
+        TelaJogo.this.btnLetraC.setText(c);
+        TelaJogo.this.btnLetraD.setText(d);
+     };
      
 int cont=1;
 int pontos=0; 
     public TelaJogo() {
         initComponents();
-        jButton1.setFocusPainted(false);
-        jButton2.setFocusPainted(false);
-        jButton3.setFocusPainted(false);
-        jButton4.setFocusPainted(false);
+        btnLetraA.setFocusPainted(false);
+        btnLetraB.setFocusPainted(false);
+        btnLetraC.setFocusPainted(false);
+        btnLetraD.setFocusPainted(false);
         this.setLocationRelativeTo(null);
+        
+        //switch para setar as perguntas e respostas
+        switch(cont){
+        case 1:
+        setPerguntas("A célula procariótica é desprovida de um:","Núcleo","Citoplasma","Plasmídeo","Flagelos");
+        break; 
+        case 2:
+        setPerguntas("A membrana plasmática é uma fina película de natureza:","Lipídica","Lipídica","Glicose","Carboidrato");
+        break; 
+        case 3:
+        setPerguntas("As organelas microscópicas constituídas por moléculas de RNA associadas a certas proteínas são:",
+                    "Ribossomos","Lisossomos","Citosol","Centríolos");
+        break; 
+        case 4:
+        setPerguntas("O complexo Golgiense é responsável pela:","Obtenção de energia.","Digestão Intracelular.","Respiração Celular.","Divisão Celular.");
+        break; 
+        case 5:
+        setPerguntas("Os lisossomos podem digerir:","Materiais vindo de fora da célula ou da própria célula",
+                "Proteínas","Lipídios","Toxinas");
+        break; 
+        case 6:
+        setPerguntas("Jota","A","B","C","D");
+        break; 
+        case 7:
+        setPerguntas("Jota","A","B","C","D");
+        break; 
+        case 8:
+        setPerguntas("Jota","A","B","C","D");
+        break; 
+        case 9:
+        setPerguntas("Jota","A","B","C","D");
+        break; 
+        case 10:
+        setPerguntas("Jota","A","B","C","D");
+        break; 
+        }
+       
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextArea1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        lblFundo = new javax.swing.JLabel();
+        btnLetraA = new javax.swing.JButton();
+        lblPergunta = new javax.swing.JLabel();
+        btnLetraB = new javax.swing.JButton();
+        btnLetraC = new javax.swing.JButton();
+        btnLetraD = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblPontos = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(530, 350));
@@ -31,164 +79,157 @@ int pontos=0;
         setPreferredSize(new java.awt.Dimension(150, 35));
         setResizable(false);
 
-        jTextArea1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
-        jTextArea1.setText("A bactéria não possui:");
+        lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/fundoBranco.png"))); // NOI18N
 
-        jButton1.setBackground(new java.awt.Color(102, 255, 255));
-        jButton1.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
-        jButton1.setText("Parede celular.");
-        jButton1.setPreferredSize(new java.awt.Dimension(150, 35));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnLetraA.setBackground(new java.awt.Color(102, 255, 255));
+        btnLetraA.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        btnLetraA.setText("Parede celular");
+        btnLetraA.setPreferredSize(new java.awt.Dimension(170, 35));
+        btnLetraA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnLetraAActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(102, 255, 255));
-        jButton2.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
-        jButton2.setText("Carioteca");
-        jButton2.setPreferredSize(new java.awt.Dimension(150, 35));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        lblPergunta.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        lblPergunta.setText("A bactéria não possui:");
+
+        btnLetraB.setBackground(new java.awt.Color(102, 255, 255));
+        btnLetraB.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        btnLetraB.setText("Carioteca");
+        btnLetraB.setPreferredSize(new java.awt.Dimension(170, 35));
+        btnLetraB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnLetraBActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(102, 255, 255));
-        jButton3.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
-        jButton3.setText("DNA.");
-        jButton3.setPreferredSize(new java.awt.Dimension(150, 35));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnLetraC.setBackground(new java.awt.Color(102, 255, 255));
+        btnLetraC.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        btnLetraC.setText("DNA");
+        btnLetraC.setPreferredSize(new java.awt.Dimension(170, 35));
+        btnLetraC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnLetraCActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(102, 255, 255));
-        jButton4.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
-        jButton4.setText("Membrana plasmática");
-        jButton4.setPreferredSize(new java.awt.Dimension(150, 35));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnLetraD.setBackground(new java.awt.Color(102, 255, 255));
+        btnLetraD.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        btnLetraD.setText("Membrana plasmática");
+        btnLetraD.setPreferredSize(new java.awt.Dimension(170, 35));
+        btnLetraD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnLetraDActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         jLabel1.setText("Pontos:");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
-        jLabel2.setText("0");
+        lblPontos.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        lblPontos.setText("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(147, 147, 147)
+                .addGap(178, 178, 178)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnLetraA, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLetraC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLetraD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLetraB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(112, Short.MAX_VALUE)
+                .addContainerGap(106, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblPontos, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addComponent(lblPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(70, 70, 70))))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(lblFundo)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
-                .addGap(3, 3, 3)
-                .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(lblPontos))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnLetraA, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addComponent(btnLetraB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnLetraC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnLetraD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(lblFundo)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
+
+        btnLetraC.getAccessibleContext().setAccessibleName("DNA");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     //Verifica qual pergunta esta sendo feoita e de acordo com isso faz com que o bnt tenha a resposta
+    private void btnLetraAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLetraAActionPerformed
+     //Verifica qual pergunta esta sendo feita e de acordo com isso faz com que o bnt tenha a resposta
      //Certa ou errada.
+     /*
+     Cada botão tem um numero X de questoes certas associadas a ele
+     Por exemplo: Considerando o Gabarito: 1-A,2-B,3-A,4-C,5-C,6-A,7-D,8-A,9-D,10-A;
+     O primeiro botao esta correto para as alternativas 1,3,6,8,10;
+     */
      switch(cont){
         case 3:
-        TelaJogo.this.jTextArea1.setText("4");
-        TelaJogo.this.jButton1.setText("4");
-        TelaJogo.this.jButton2.setText("sl2");
-        TelaJogo.this.jButton3.setText("sl3");
-        TelaJogo.this.jButton4.setText("sl4");
         cont=(cont+1);
         pontos=(pontos+5);
-        TelaJogo.this.jLabel2.setText(""+pontos); 
+        TelaJogo.this.lblPontos.setText(""+pontos); 
             break; 
         case 7:
-        TelaJogo.this.jTextArea1.setText("8");
-        TelaJogo.this.jButton1.setText("8");
-        TelaJogo.this.jButton2.setText("sl2");
-        TelaJogo.this.jButton3.setText("sl3");
-        TelaJogo.this.jButton4.setText("sl4");
         TelaJogo.this.setVisible(true);
         cont=(cont+1);
         pontos=(pontos+5);
-        TelaJogo.this.jLabel2.setText(""+pontos); 
+        TelaJogo.this.lblPontos.setText(""+pontos); 
             break;
         default:
         RespostaErrada(); 
             break;
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnLetraAActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnLetraBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLetraBActionPerformed
        switch(cont){
         case 1:
-        TelaJogo.this.jTextArea1.setText("Um organismo unicelular, sem núcleo \n diferenciado,\ncausador de infecção em ratos, provavelmente será:");
-        TelaJogo.this.jButton1.setText("um fungo");
-        TelaJogo.this.jButton2.setText("um vírus.");
-        TelaJogo.this.jButton3.setText("uma alga");
-        TelaJogo.this.jButton4.setText("uma bactéria."); 
         cont=(cont+1);
         pontos=(pontos+5);
-        TelaJogo.this.jLabel2.setText(""+pontos); 
+        TelaJogo.this.lblPontos.setText(""+pontos); 
             break;
         case 4:
-        TelaJogo.this.jTextArea1.setText("5");
-        TelaJogo.this.jButton1.setText("sl1");
-        TelaJogo.this.jButton2.setText("5");
-        TelaJogo.this.jButton3.setText("sl3");
-        TelaJogo.this.jButton4.setText("sl4");
-        TelaJogo.this.setVisible(true);
          cont=(cont+1);
          pontos=(pontos+5);
-         TelaJogo.this.jLabel2.setText(""+pontos); 
+         TelaJogo.this.lblPontos.setText(""+pontos); 
             break;
         case 8:
-        TelaJogo.this.jTextArea1.setText("9");
-        TelaJogo.this.jButton1.setText("sl1");
-        TelaJogo.this.jButton2.setText("9");
-        TelaJogo.this.jButton3.setText("sl3");
-        TelaJogo.this.jButton4.setText("sl4");
-        TelaJogo.this.setVisible(true);
         cont=(cont+1);
         pontos=(pontos+5);
-        TelaJogo.this.jLabel2.setText(""+pontos); 
+        TelaJogo.this.lblPontos.setText(""+pontos); 
             break;
         case 10:
         TelaJogo.this.dispose();
@@ -199,69 +240,45 @@ int pontos=0;
          RespostaErrada();
             break;
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnLetraBActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnLetraDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLetraDActionPerformed
        switch(cont){   
-        case 2:    
-        TelaJogo.this.jTextArea1.setText("Podemos classificar as bactérias como");
-        TelaJogo.this.jButton1.setText("Eucariontes unicelulares.");
-        TelaJogo.this.jButton2.setText("eucariontes pluricelulares.");
-        TelaJogo.this.jButton3.setText("eucariontes coloniais.");
-        TelaJogo.this.jButton4.setText("procariontes unicelulares");    
+        case 2:     
          cont=(cont+1);
          pontos=(pontos+5);
-         TelaJogo.this.jLabel2.setText(""+pontos); 
+         TelaJogo.this.lblPontos.setText(""+pontos); 
             break;
         case 6:
-        TelaJogo.this.jTextArea1.setText("7");
-        TelaJogo.this.jButton1.setText("sl1");
-        TelaJogo.this.jButton2.setText("sl2");
-        TelaJogo.this.jButton3.setText("sl3");
-        TelaJogo.this.jButton4.setText("7");
-        TelaJogo.this.setVisible(true);
        cont=(cont+1);
        pontos=(pontos+5);
-       TelaJogo.this.jLabel2.setText(""+pontos); 
+       TelaJogo.this.lblPontos.setText(""+pontos); 
             break;
         case 9:
-        TelaJogo.this.jTextArea1.setText("10");
-        TelaJogo.this.jButton1.setText("sl1");
-        TelaJogo.this.jButton2.setText("sl2");
-        TelaJogo.this.jButton3.setText("sl3");
-        TelaJogo.this.jButton4.setText("10");
         TelaJogo.this.setVisible(true); 
          cont=(cont+1);
          pontos=(pontos+5);
-         TelaJogo.this.jLabel2.setText(""+pontos); 
+         TelaJogo.this.lblPontos.setText(""+pontos); 
             break;
         default:
          RespostaErrada();   
-         
+     
             break;
         }
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnLetraDActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnLetraCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLetraCActionPerformed
       switch(cont){
         case 5:
-         TelaJogo.this.jTextArea1.setText("6");
-            TelaJogo.this.jButton1.setText("sl1");
-            TelaJogo.this.jButton2.setText("sl2");
-            TelaJogo.this.jButton3.setText("6");
-            TelaJogo.this.jButton4.setText("sl4");
-            TelaJogo.this.setVisible(true);
          cont=(cont+1);
          pontos=(pontos+5);
-         TelaJogo.this.jLabel2.setText(""+pontos); 
+         TelaJogo.this.lblPontos.setText(""+pontos); 
             break;
         default:
          RespostaErrada();
             break;
         }
-      
-      
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnLetraCActionPerformed
 
     /**
      * @param args the command line arguments
@@ -280,12 +297,13 @@ int pontos=0;
     cont=1;
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnLetraA;
+    private javax.swing.JButton btnLetraB;
+    private javax.swing.JButton btnLetraC;
+    private javax.swing.JButton btnLetraD;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jTextArea1;
+    private javax.swing.JLabel lblFundo;
+    private javax.swing.JLabel lblPergunta;
+    private javax.swing.JLabel lblPontos;
     // End of variables declaration//GEN-END:variables
 }

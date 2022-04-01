@@ -38,10 +38,10 @@ public class TelaMenu extends javax.swing.JFrame {
 
         lblIconeGame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/iconeQuiz.png"))); // NOI18N
         getContentPane().add(lblIconeGame);
-        lblIconeGame.setBounds(79, 11, 206, 86);
+        lblIconeGame.setBounds(160, 10, 206, 86);
 
         btnJoga.setBackground(new java.awt.Color(153, 255, 255));
-        btnJoga.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        btnJoga.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         btnJoga.setText("Jogar");
         btnJoga.setMaximumSize(new java.awt.Dimension(75, 25));
         btnJoga.setMinimumSize(new java.awt.Dimension(75, 25));
@@ -52,10 +52,10 @@ public class TelaMenu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnJoga);
-        btnJoga.setBounds(140, 130, 150, 35);
+        btnJoga.setBounds(190, 130, 150, 35);
 
         btnCreditos.setBackground(new java.awt.Color(153, 255, 255));
-        btnCreditos.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        btnCreditos.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         btnCreditos.setText("Creditos");
         btnCreditos.setMaximumSize(new java.awt.Dimension(75, 25));
         btnCreditos.setMinimumSize(new java.awt.Dimension(75, 25));
@@ -66,11 +66,11 @@ public class TelaMenu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnCreditos);
-        btnCreditos.setBounds(140, 210, 150, 35);
+        btnCreditos.setBounds(190, 210, 150, 35);
 
         btnSair.setBackground(new java.awt.Color(153, 255, 255));
-        btnSair.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
-        btnSair.setText("sair");
+        btnSair.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        btnSair.setText("Sair");
         btnSair.setMaximumSize(new java.awt.Dimension(75, 25));
         btnSair.setMinimumSize(new java.awt.Dimension(75, 25));
         btnSair.setPreferredSize(new java.awt.Dimension(150, 35));
@@ -80,10 +80,10 @@ public class TelaMenu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnSair);
-        btnSair.setBounds(140, 250, 150, 35);
+        btnSair.setBounds(190, 250, 150, 35);
 
         btnOpcoes.setBackground(new java.awt.Color(153, 255, 255));
-        btnOpcoes.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        btnOpcoes.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         btnOpcoes.setText("Opções");
         btnOpcoes.setMaximumSize(new java.awt.Dimension(75, 25));
         btnOpcoes.setMinimumSize(new java.awt.Dimension(75, 25));
@@ -94,7 +94,7 @@ public class TelaMenu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnOpcoes);
-        btnOpcoes.setBounds(140, 170, 150, 35);
+        btnOpcoes.setBounds(190, 170, 150, 35);
 
         lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/fundoBranco.png"))); // NOI18N
         getContentPane().add(lblFundo);
@@ -124,7 +124,10 @@ public class TelaMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void btnOpcoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOpcoesActionPerformed
-        // TODO add your handling code here:
+     //Cria a janela game.
+      TelaOpcoes op = new TelaOpcoes();
+      op.setVisible(true);   
+      TelaMenu.this.dispose(); 
     }//GEN-LAST:event_btnOpcoesActionPerformed
 
     
