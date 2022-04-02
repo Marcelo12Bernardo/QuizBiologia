@@ -12,8 +12,9 @@ public class TelaJogo extends javax.swing.JFrame {
         TelaJogo.this.btnLetraD.setText(d);
      };
      
-int cont=1;
+
 int pontos=0; 
+int cont=1;
     public TelaJogo() {
         initComponents();
         btnLetraA.setFocusPainted(false);
@@ -28,33 +29,31 @@ int pontos=0;
         setPerguntas("A célula procariótica é desprovida de um:","Núcleo","Citoplasma","Plasmídeo","Flagelos");
         break; 
         case 2:
-        setPerguntas("A membrana plasmática é uma fina película de natureza:","Lipídica","Lipídica","Glicose","Carboidrato");
+        setPerguntas("A membrana plasmática é uma fina película de natureza:","Lipídica","Proteíca","Glicose","Carboidrata");
         break; 
         case 3:
-        setPerguntas("As organelas microscópicas constituídas por moléculas de RNA associadas a certas proteínas são:",
-                    "Ribossomos","Lisossomos","Citosol","Centríolos");
+        setPerguntas("As organelas microscópicas constituídas por moléculas de RNA associadas a certas proteínas são:","Ribossomos","Lisossomos","Citosol","Centríolos");
         break; 
         case 4:
         setPerguntas("O complexo Golgiense é responsável pela:","Obtenção de energia.","Digestão Intracelular.","Respiração Celular.","Divisão Celular.");
         break; 
         case 5:
-        setPerguntas("Os lisossomos podem digerir:","Materiais vindo de fora da célula ou da própria célula",
-                "Proteínas","Lipídios","Toxinas");
+        setPerguntas("Os lisossomos podem digerir:","Materiais vindo de fora da célula ou da própria célula","Proteínas","Lipídios","Toxinas");
         break; 
         case 6:
-        setPerguntas("Jota","A","B","C","D");
+        setPerguntas("Qual é a função do Citoesqueleto?","Respiração Celular","Digestão Celular","Degradação de toxinas","Apoio e ancoragem às organelas membranosas");
         break; 
         case 7:
-        setPerguntas("Jota","A","B","C","D");
+        setPerguntas("O Retículo Endoplasmático rugoso é sintetizado por","Organelas","Lipídios","Proteínas","Organelas");
         break; 
         case 8:
-        setPerguntas("Jota","A","B","C","D");
+        setPerguntas("Onde ocorre grande parte das reações químicas do metabolismo celular?","Citosol","RNA","Plasma","Flagelos");
         break; 
         case 9:
-        setPerguntas("Jota","A","B","C","D");
+        setPerguntas("O que são seres autótrofos?","Seres que se alimentam-se de restos","Seres que possuem DNA","Seres que não são capazes de sintetizar seu próprio alimento","Seres capazes de sintetizar seu próprio alimento");
         break; 
         case 10:
-        setPerguntas("Jota","A","B","C","D");
+        setPerguntas("O que Mendel utilizava para fazer seus experimentos?","Ratos","Animais","Ervilhas","Azeitonas");
         break; 
         }
        
@@ -183,100 +182,72 @@ int pontos=0;
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        btnLetraC.getAccessibleContext().setAccessibleName("DNA");
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLetraAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLetraAActionPerformed
-     //Verifica qual pergunta esta sendo feita e de acordo com isso faz com que o bnt tenha a resposta
-     //Certa ou errada.
-     /*
-     Cada botão tem um numero X de questoes certas associadas a ele
-     Por exemplo: Considerando o Gabarito: 1-A,2-B,3-A,4-C,5-C,6-A,7-D,8-A,9-D,10-A;
-     O primeiro botao esta correto para as alternativas 1,3,6,8,10;
-     */
-     switch(cont){
-        case 3:
-        cont=(cont+1);
-        pontos=(pontos+5);
-        TelaJogo.this.lblPontos.setText(""+pontos); 
-            break; 
-        case 7:
-        TelaJogo.this.setVisible(true);
-        cont=(cont+1);
-        pontos=(pontos+5);
-        TelaJogo.this.lblPontos.setText(""+pontos); 
-            break;
-        default:
-        RespostaErrada(); 
-            break;
+        switch(cont)
+        {
+            case 3:
+                RespostaCerta(); 
+                break; 
+            case 5:
+                RespostaCerta(); 
+                break; 
+            case 8:
+                RespostaCerta(); 
+                break; 
+            default:
+                RespostaErrada(); 
+                break;
         }
     }//GEN-LAST:event_btnLetraAActionPerformed
 
     private void btnLetraBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLetraBActionPerformed
-       switch(cont){
-        case 1:
-        cont=(cont+1);
-        pontos=(pontos+5);
-        TelaJogo.this.lblPontos.setText(""+pontos); 
-            break;
-        case 4:
-         cont=(cont+1);
-         pontos=(pontos+5);
-         TelaJogo.this.lblPontos.setText(""+pontos); 
-            break;
-        case 8:
-        cont=(cont+1);
-        pontos=(pontos+5);
-        TelaJogo.this.lblPontos.setText(""+pontos); 
-            break;
-        case 10:
-        TelaJogo.this.dispose();
-        TelaVitoria tela = new TelaVitoria();
-        tela.setVisible(true);
-            break;
-        default:
-         RespostaErrada();
-            break;
+        switch(cont)
+        {
+            case 1:
+                RespostaCerta(); 
+                break; 
+            case 4:
+                RespostaCerta(); 
+                break; 
+            default:
+                RespostaErrada();
+                break;
         }
     }//GEN-LAST:event_btnLetraBActionPerformed
 
     private void btnLetraDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLetraDActionPerformed
-       switch(cont){   
-        case 2:     
-         cont=(cont+1);
-         pontos=(pontos+5);
-         TelaJogo.this.lblPontos.setText(""+pontos); 
-            break;
-        case 6:
-       cont=(cont+1);
-       pontos=(pontos+5);
-       TelaJogo.this.lblPontos.setText(""+pontos); 
-            break;
-        case 9:
-        TelaJogo.this.setVisible(true); 
-         cont=(cont+1);
-         pontos=(pontos+5);
-         TelaJogo.this.lblPontos.setText(""+pontos); 
-            break;
-        default:
-         RespostaErrada();   
-     
-            break;
+        switch(cont)
+        {   
+            case 2:
+                RespostaCerta(); 
+                break; 
+            case 6:
+                RespostaCerta(); 
+                break; 
+            case 9:
+                RespostaCerta(); 
+                break; 
+            default:
+                RespostaErrada();   
+                break;
         }
     }//GEN-LAST:event_btnLetraDActionPerformed
 
     private void btnLetraCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLetraCActionPerformed
-      switch(cont){
-        case 5:
-         cont=(cont+1);
-         pontos=(pontos+5);
-         TelaJogo.this.lblPontos.setText(""+pontos); 
-            break;
-        default:
-         RespostaErrada();
-            break;
+        switch(cont)
+        {
+            case 7:
+                RespostaCerta(); 
+                break; 
+            case 10:
+                RespostaCerta(); 
+                break; 
+            default:
+                RespostaErrada();
+                break;
         }
     }//GEN-LAST:event_btnLetraCActionPerformed
 
@@ -295,6 +266,18 @@ int pontos=0;
      new TelaDerrota().setVisible(true);
     TelaJogo.this.dispose();
     cont=1;
+    }
+    public void RespostaCerta(){
+        if(pontos<100)
+        {
+            
+            pontos=(pontos+5);
+            TelaJogo.this.lblPontos.setText(""+pontos);
+            TelaJogo.this.dispose();
+            cont++;
+            new TelaJogo().setVisible(true);
+            
+        }else if(pontos<100){TelaJogo.this.dispose(); new TelaVitoria().setVisible(true);}
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLetraA;

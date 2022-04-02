@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 
 
 public class TelaMenu extends javax.swing.JFrame {
+    public int cont=1;
     public TelaMenu() {
         initComponents();
         btnJoga.setFocusPainted(false);
