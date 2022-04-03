@@ -55,8 +55,10 @@ public class TelaDerrota extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2);
         jButton2.setBounds(200, 380, 80, 23);
+
+        lblPlanoDeFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaDerrota.jpg"))); // NOI18N
         getContentPane().add(lblPlanoDeFundo);
-        lblPlanoDeFundo.setBounds(0, 0, 0, 0);
+        lblPlanoDeFundo.setBounds(0, 0, 1400, 840);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

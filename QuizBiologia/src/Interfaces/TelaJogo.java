@@ -4,17 +4,52 @@ import javax.swing.JOptionPane;
 
 
 public class TelaJogo extends javax.swing.JFrame {
-     public void setPerguntas(String pergunta,String a,String b,String c,String d){
+    
+    public void setPerguntas(String pergunta,String a,String b,String c,String d){
         TelaJogo.this.lblPergunta.setText(pergunta);
         TelaJogo.this.btnLetraA.setText(a);
         TelaJogo.this.btnLetraB.setText(b);
         TelaJogo.this.btnLetraC.setText(c);
         TelaJogo.this.btnLetraD.setText(d);
      };
-     
+    public void ConfiguraTela(int contador){
+            switch(contador){
+            case 1:
+            setPerguntas("A célula procariótica é desprovida de um:","Núcleo","Citoplasma","Plasmídeo","Flagelos");
+            break; 
+            case 2:
+            setPerguntas("A membrana plasmática é uma fina película de natureza:","Lipídica","Proteíca","Glicose","Carboidrata");
+            break; 
+            case 3:
+            setPerguntas("As organelas microscópicas constituídas por moléculas de RNA associadas a certas proteínas são:","Ribossomos","Lisossomos","Citosol","Centríolos");
+            break; 
+            case 4:
+            setPerguntas("O complexo Golgiense é responsável pela:","Obtenção de energia.","Digestão Intracelular.","Respiração Celular.","Divisão Celular.");
+            break; 
+            case 5:
+            setPerguntas("Os lisossomos podem digerir:","Materiais vindo de fora da célula ou da própria célula","Proteínas","Lipídios","Toxinas");
+            break; 
+            case 6:
+            setPerguntas("Qual é a função do Citoesqueleto?","Respiração Celular","Digestão Celular","Degradação de toxinas","Apoio e ancoragem às organelas membranosas");
+            break; 
+            case 7:
+            setPerguntas("O Retículo Endoplasmático rugoso é sintetizado por","Organelas","Lipídios","Proteínas","Organelas");
+            break; 
+            case 8:
+            setPerguntas("Onde ocorre grande parte das reações químicas do metabolismo celular?","Citosol","RNA","Plasma","Flagelos");
+            break; 
+            case 9:
+            setPerguntas("O que são seres autótrofos?","Seres que se alimentam-se de restos","Seres que possuem DNA","Seres que não são capazes de sintetizar seu próprio alimento","Seres capazes de sintetizar seu próprio alimento");
+            break; 
+            case 10:
+            setPerguntas("O que Mendel utilizava para fazer seus experimentos?","Ratos","Animais","Ervilhas","Azeitonas");
+            break; 
+            }
+    
+    };
 
-int pontos=0; 
-int cont=1;
+    int pontos=0; 
+    int cont=1;
     public TelaJogo() {
         initComponents();
         btnLetraA.setFocusPainted(false);
@@ -24,38 +59,7 @@ int cont=1;
         this.setLocationRelativeTo(null);
         
         //switch para setar as perguntas e respostas
-        switch(cont){
-        case 1:
-        setPerguntas("A célula procariótica é desprovida de um:","Núcleo","Citoplasma","Plasmídeo","Flagelos");
-        break; 
-        case 2:
-        setPerguntas("A membrana plasmática é uma fina película de natureza:","Lipídica","Proteíca","Glicose","Carboidrata");
-        break; 
-        case 3:
-        setPerguntas("As organelas microscópicas constituídas por moléculas de RNA associadas a certas proteínas são:","Ribossomos","Lisossomos","Citosol","Centríolos");
-        break; 
-        case 4:
-        setPerguntas("O complexo Golgiense é responsável pela:","Obtenção de energia.","Digestão Intracelular.","Respiração Celular.","Divisão Celular.");
-        break; 
-        case 5:
-        setPerguntas("Os lisossomos podem digerir:","Materiais vindo de fora da célula ou da própria célula","Proteínas","Lipídios","Toxinas");
-        break; 
-        case 6:
-        setPerguntas("Qual é a função do Citoesqueleto?","Respiração Celular","Digestão Celular","Degradação de toxinas","Apoio e ancoragem às organelas membranosas");
-        break; 
-        case 7:
-        setPerguntas("O Retículo Endoplasmático rugoso é sintetizado por","Organelas","Lipídios","Proteínas","Organelas");
-        break; 
-        case 8:
-        setPerguntas("Onde ocorre grande parte das reações químicas do metabolismo celular?","Citosol","RNA","Plasma","Flagelos");
-        break; 
-        case 9:
-        setPerguntas("O que são seres autótrofos?","Seres que se alimentam-se de restos","Seres que possuem DNA","Seres que não são capazes de sintetizar seu próprio alimento","Seres capazes de sintetizar seu próprio alimento");
-        break; 
-        case 10:
-        setPerguntas("O que Mendel utilizava para fazer seus experimentos?","Ratos","Animais","Ervilhas","Azeitonas");
-        break; 
-        }
+        ConfiguraTela(cont);
        
     }
 
@@ -72,13 +76,13 @@ int cont=1;
         jLabel1 = new javax.swing.JLabel();
         lblPontos = new javax.swing.JLabel();
 
+        lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/fundoBranco.png"))); // NOI18N
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(530, 350));
         setMinimumSize(new java.awt.Dimension(530, 350));
         setPreferredSize(new java.awt.Dimension(150, 35));
         setResizable(false);
-
-        lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/fundoBranco.png"))); // NOI18N
 
         btnLetraA.setBackground(new java.awt.Color(102, 255, 255));
         btnLetraA.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
@@ -92,6 +96,7 @@ int cont=1;
 
         lblPergunta.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         lblPergunta.setText("A bactéria não possui:");
+        lblPergunta.setToolTipText("");
 
         btnLetraB.setBackground(new java.awt.Color(102, 255, 255));
         btnLetraB.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
@@ -142,20 +147,15 @@ int cont=1;
                     .addComponent(btnLetraB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(106, Short.MAX_VALUE)
+                .addContainerGap(71, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblPontos, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(70, 70, 70))))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(lblFundo)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(lblPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(69, 69, 69))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,9 +164,9 @@ int cont=1;
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(lblPontos))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(1, 1, 1)
+                .addComponent(lblPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnLetraA, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnLetraB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -175,11 +175,6 @@ int cont=1;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnLetraD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(46, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(lblFundo)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -263,22 +258,21 @@ int cont=1;
         });
     }
     public void RespostaErrada(){
-     new TelaDerrota().setVisible(true);
+    new TelaDerrota().setVisible(true);
     TelaJogo.this.dispose();
     cont=1;
     }
     public void RespostaCerta(){
+        pontos=(pontos+10);
+        lblPontos.setText(""+pontos);
         if(pontos<100)
         {
-            
-            pontos=(pontos+5);
-            TelaJogo.this.lblPontos.setText(""+pontos);
-            TelaJogo.this.dispose();
             cont++;
-            new TelaJogo().setVisible(true);
-            
-        }else if(pontos<100){TelaJogo.this.dispose(); new TelaVitoria().setVisible(true);}
+            ConfiguraTela(cont);
+        }else if(pontos==100){TelaJogo.this.dispose(); new TelaVitoria().setVisible(true);}
     }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLetraA;
     private javax.swing.JButton btnLetraB;

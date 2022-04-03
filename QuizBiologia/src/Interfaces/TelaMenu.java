@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 
 
 public class TelaMenu extends javax.swing.JFrame {
-    public int cont=1;
+    
     public TelaMenu() {
         initComponents();
         btnJoga.setFocusPainted(false);
@@ -114,8 +114,7 @@ public class TelaMenu extends javax.swing.JFrame {
     private void btnCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreditosActionPerformed
        TelaMenu.this.setVisible(false);
         JOptionPane.showMessageDialog(null,"*Programador:\nMarcelo Bernardo Prudencio\n"
-               + "\n*Colaboradores:\nMarcus Vinicios Dias\n"
-               + "Ivanilso da Silva Conceiçao Filho\n"
+               + "\n*Colaboradores:\n-------\n"
                + "\n*Designer grafico:\nMarcelo Bernardo Prudencio");
          TelaMenu.this.setVisible(true);
     }//GEN-LAST:event_btnCreditosActionPerformed

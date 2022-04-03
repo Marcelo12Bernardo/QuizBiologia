@@ -22,6 +22,8 @@ public class TelaVitoria extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(530, 350));
         setResizable(false);
 
+        lblPlanoDeFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaVitoria.jpg"))); // NOI18N
+
         jButton1.setText("Voltar ao menu");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,7 +61,7 @@ public class TelaVitoria extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(255, Short.MAX_VALUE)
+                .addContainerGap(293, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)
